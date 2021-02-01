@@ -1,0 +1,1357 @@
+@prefix : <http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@base <http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#> .
+
+<http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#> rdf:type owl:Ontology ;
+                                                         owl:imports <http://niche.cs.dal.ca/reflex-ontology.owl#> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#measuresHormone
+:measuresHormone rdf:type owl:ObjectProperty ;
+                 rdfs:domain :HormoneTest ;
+                 rdfs:range :Hormone .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#range
+:range rdf:type owl:ObjectProperty ;
+       rdfs:domain :HormoneTest ;
+       rdfs:range :OutcomeRange .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Hormone
+:Hormone rdf:type owl:Class .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#HormoneTest
+:HormoneTest rdf:type owl:Class ;
+             rdfs:subClassOf <http://niche.cs.dal.ca/reflex-ontology.owl#LaboratoryTest> .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#NonThyroidalIllness
+:NonThyroidalIllness rdf:type owl:Class ;
+                     rdfs:subClassOf <http://niche.cs.dal.ca/reflex-ontology.owl#Illness> .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#OutcomeRange
+:OutcomeRange rdf:type owl:Class .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#ThyroidMedication
+:ThyroidMedication rdf:type owl:Class ;
+                   rdfs:subClassOf <http://niche.cs.dal.ca/reflex-ontology.owl#Medication> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#AddOnTest_Cortisol
+:AddOnTest_Cortisol rdf:type owl:NamedIndividual ,
+                             :HormoneTest ;
+                    :measuresHormone :Cortisol .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#AddOnTest_E2
+:AddOnTest_E2 rdf:type owl:NamedIndividual ,
+                       :HormoneTest ;
+              :measuresHormone :E2 .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#AddOnTest_FSH
+:AddOnTest_FSH rdf:type owl:NamedIndividual ,
+                        :HormoneTest ;
+               :measuresHormone :FSH .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#AddOnTest_LH
+:AddOnTest_LH rdf:type owl:NamedIndividual ,
+                       :HormoneTest ;
+              :measuresHormone :LH .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#AddOnTest_Prolactin
+:AddOnTest_Prolactin rdf:type owl:NamedIndividual ,
+                              :HormoneTest ;
+                     :measuresHormone :Prolactin .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#AddOnTest_TST
+:AddOnTest_TST rdf:type owl:NamedIndividual ,
+                        :HormoneTest ;
+               :measuresHormone :TST .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Comment11
+:Comment11 rdf:type owl:NamedIndividual ,
+                    <http://niche.cs.dal.ca/reflex-ontology.owl#InterpretiveComment> ;
+           <http://niche.cs.dal.ca/reflex-ontology.owl#comment> "Low TSH and FT4. If this patient is not on therapy for a thyroid condition, or is not unwell due to a systemic illness (non-thyroidal), suggest referral to the endocrine neuro-pituitary clinic to exclude secondary hypothyroidism."^^xsd:string .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Comment12
+:Comment12 rdf:type owl:NamedIndividual ,
+                    <http://niche.cs.dal.ca/reflex-ontology.owl#InterpretiveComment> ;
+           <http://niche.cs.dal.ca/reflex-ontology.owl#comment> "Low TSH and FT4 which has triggered further endocrine testing. Results are suggestive of secondary hypothyroidism and other possible endocrine abnormalities. If there is no clinical condition or therapy known in this patient to explain these results, referral to the endocrine neuro-pituitary clinic is warranted."^^xsd:string .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Cortisol
+:Cortisol rdf:type owl:NamedIndividual ,
+                   :Hormone .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#E2
+:E2 rdf:type owl:NamedIndividual ,
+             :Hormone .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#ExclusionRule11
+:ExclusionRule11 rdf:type owl:NamedIndividual ,
+                          <http://niche.cs.dal.ca/reflex-ontology.owl#ExclusionRule> .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#ExclusionRule12
+:ExclusionRule12 rdf:type owl:NamedIndividual ,
+                          <http://niche.cs.dal.ca/reflex-ontology.owl#ExclusionRule> .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#FSH
+:FSH rdf:type owl:NamedIndividual ,
+              :Hormone .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#FT4
+:FT4 rdf:type owl:NamedIndividual ,
+              :Hormone .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#FollowupRule111
+:FollowupRule111 rdf:type owl:NamedIndividual ,
+                          <http://niche.cs.dal.ca/reflex-ontology.owl#FollowupRule> ,
+                          <http://niche.cs.dal.ca/reflex-ontology.owl#TwoTestFollowup> ;
+                 <http://niche.cs.dal.ca/reflex-ontology.owl#hasComment> :Comment11 ;
+                 <http://niche.cs.dal.ca/reflex-ontology.owl#stage> "1"^^xsd:int .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#FollowupRule112
+:FollowupRule112 rdf:type owl:NamedIndividual ,
+                          <http://niche.cs.dal.ca/reflex-ontology.owl#FollowupRule> ,
+                          <http://niche.cs.dal.ca/reflex-ontology.owl#TwoTestFollowup> ;
+                 <http://niche.cs.dal.ca/reflex-ontology.owl#hasComment> :Comment11 ;
+                 <http://niche.cs.dal.ca/reflex-ontology.owl#stage> "1"^^xsd:int .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#FollowupRule113
+:FollowupRule113 rdf:type owl:NamedIndividual ,
+                          <http://niche.cs.dal.ca/reflex-ontology.owl#FollowupRule> ,
+                          <http://niche.cs.dal.ca/reflex-ontology.owl#ThreeTestFollowup> ;
+                 <http://niche.cs.dal.ca/reflex-ontology.owl#hasComment> :Comment11 ;
+                 <http://niche.cs.dal.ca/reflex-ontology.owl#stage> "1"^^xsd:int .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#FollowupRule121
+:FollowupRule121 rdf:type owl:NamedIndividual ,
+                          <http://niche.cs.dal.ca/reflex-ontology.owl#FollowupRule> ,
+                          <http://niche.cs.dal.ca/reflex-ontology.owl#OneTestFollowup> ;
+                 <http://niche.cs.dal.ca/reflex-ontology.owl#hasComment> :Comment12 ;
+                 <http://niche.cs.dal.ca/reflex-ontology.owl#stage> 2 .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#FollowupRule122
+:FollowupRule122 rdf:type owl:NamedIndividual ,
+                          <http://niche.cs.dal.ca/reflex-ontology.owl#FollowupRule> ,
+                          <http://niche.cs.dal.ca/reflex-ontology.owl#OneTestFollowup> ;
+                 <http://niche.cs.dal.ca/reflex-ontology.owl#hasComment> :Comment12 ;
+                 <http://niche.cs.dal.ca/reflex-ontology.owl#stage> "2"^^xsd:int .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#LH
+:LH rdf:type owl:NamedIndividual ,
+             :Hormone .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Low
+:Low rdf:type owl:NamedIndividual ,
+              :OutcomeRange .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#LowForAge
+:LowForAge rdf:type owl:NamedIndividual ,
+                    :OutcomeRange .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#NonRaised
+:NonRaised rdf:type owl:NamedIndividual ,
+                    :OutcomeRange .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#NonThyroidalIllness_A
+:NonThyroidalIllness_A rdf:type owl:NamedIndividual ,
+                                :NonThyroidalIllness ,
+                                <http://niche.cs.dal.ca/reflex-ontology.owl#Illness> .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Normal
+:Normal rdf:type owl:NamedIndividual ,
+                 :OutcomeRange .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Patient_A
+:Patient_A rdf:type owl:NamedIndividual ,
+                    <http://niche.cs.dal.ca/reflex-ontology.owl#Patient> ;
+           <http://niche.cs.dal.ca/reflex-ontology.owl#gender> <http://niche.cs.dal.ca/reflex-ontology.owl#Female> ;
+           <http://niche.cs.dal.ca/reflex-ontology.owl#hasIllness> :NonThyroidalIllness_A ;
+           <http://niche.cs.dal.ca/reflex-ontology.owl#hasMedication> :ThyroidMedication_A ;
+           <http://niche.cs.dal.ca/reflex-ontology.owl#hasTest> :Test_Cortisol_A2 ,
+                                                                :Test_E2_A1 ,
+                                                                :Test_FSH_A1 ,
+                                                                :Test_FT4_A0 ,
+                                                                :Test_LH_A1 ,
+                                                                :Test_Prolactin_A2 ,
+                                                                :Test_TSH_A0 ,
+                                                                :Test_TST_A1 ;
+           <http://niche.cs.dal.ca/reflex-ontology.owl#age> 54 .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#PituitaryDysfunction
+:PituitaryDysfunction rdf:type owl:NamedIndividual ,
+                               <http://niche.cs.dal.ca/reflex-ontology.owl#HealthCondition> ;
+                      <http://niche.cs.dal.ca/reflex-ontology.owl#hasReflexRule> :ReflexRule1 .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Prolactin
+:Prolactin rdf:type owl:NamedIndividual ,
+                    :Hormone .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Raised
+:Raised rdf:type owl:NamedIndividual ,
+                 :OutcomeRange .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#ReflexRule1
+:ReflexRule1 rdf:type owl:NamedIndividual ,
+                      <http://niche.cs.dal.ca/reflex-ontology.owl#ReflexRule> ,
+                      <http://niche.cs.dal.ca/reflex-ontology.owl#TwoTestReflex> ;
+             <http://niche.cs.dal.ca/reflex-ontology.owl#hasExclusion> :ExclusionRule11 ,
+                                                                       :ExclusionRule12 ;
+             <http://niche.cs.dal.ca/reflex-ontology.owl#hasFollowup> :FollowupRule111 ,
+                                                                      :FollowupRule112 ,
+                                                                      :FollowupRule113 ,
+                                                                      :FollowupRule121 ,
+                                                                      :FollowupRule122 ;
+             <http://niche.cs.dal.ca/reflex-ontology.owl#hasTestPattern> :TestPatternRule111 ,
+                                                                         :TestPatternRule112 ,
+                                                                         :TestPatternRule113 ,
+                                                                         :TestPatternRule114 ,
+                                                                         :TestPatternRule121 ,
+                                                                         :TestPatternRule122 ;
+             <http://niche.cs.dal.ca/reflex-ontology.owl#reflexedTest> :Test_Cortisol_A2 ,
+                                                                       :Test_E2_A1 ,
+                                                                       :Test_FSH_A1 ,
+                                                                       :Test_LH_A1 ,
+                                                                       :Test_Prolactin_A2 ,
+                                                                       :Test_TST_A1 .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#TSH
+:TSH rdf:type owl:NamedIndividual ,
+              :Hormone .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#TST
+:TST rdf:type owl:NamedIndividual ,
+              :Hormone .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#TestPatternRule111
+:TestPatternRule111 rdf:type owl:NamedIndividual ,
+                             <http://niche.cs.dal.ca/reflex-ontology.owl#TestPatternRule> ;
+                    <http://niche.cs.dal.ca/reflex-ontology.owl#involvesTest> :AddOnTest_E2 ,
+                                                                              :AddOnTest_FSH ;
+                    <http://niche.cs.dal.ca/reflex-ontology.owl#stage> "1"^^xsd:int .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#TestPatternRule112
+:TestPatternRule112 rdf:type owl:NamedIndividual ,
+                             <http://niche.cs.dal.ca/reflex-ontology.owl#TestPatternRule> ;
+                    <http://niche.cs.dal.ca/reflex-ontology.owl#involvesTest> :AddOnTest_FSH ,
+                                                                              :AddOnTest_LH ,
+                                                                              :AddOnTest_TST ;
+                    <http://niche.cs.dal.ca/reflex-ontology.owl#stage> "1"^^xsd:int .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#TestPatternRule113
+:TestPatternRule113 rdf:type owl:NamedIndividual ,
+                             <http://niche.cs.dal.ca/reflex-ontology.owl#TestPatternRule> ;
+                    <http://niche.cs.dal.ca/reflex-ontology.owl#involvesTest> :AddOnTest_Cortisol ;
+                    <http://niche.cs.dal.ca/reflex-ontology.owl#stage> "1"^^xsd:int .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#TestPatternRule114
+:TestPatternRule114 rdf:type owl:NamedIndividual ,
+                             <http://niche.cs.dal.ca/reflex-ontology.owl#TestPatternRule> ;
+                    <http://niche.cs.dal.ca/reflex-ontology.owl#involvesTest> :AddOnTest_Prolactin ;
+                    <http://niche.cs.dal.ca/reflex-ontology.owl#stage> "1"^^xsd:int .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#TestPatternRule121
+:TestPatternRule121 rdf:type owl:NamedIndividual ,
+                             <http://niche.cs.dal.ca/reflex-ontology.owl#TestPatternRule> ;
+                    <http://niche.cs.dal.ca/reflex-ontology.owl#involvesTest> :AddOnTest_Cortisol ;
+                    <http://niche.cs.dal.ca/reflex-ontology.owl#stage> 2 .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#TestPatternRule122
+:TestPatternRule122 rdf:type owl:NamedIndividual ,
+                             <http://niche.cs.dal.ca/reflex-ontology.owl#TestPatternRule> ;
+                    <http://niche.cs.dal.ca/reflex-ontology.owl#involvesTest> :AddOnTest_Prolactin ;
+                    <http://niche.cs.dal.ca/reflex-ontology.owl#stage> "2"^^xsd:int .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Test_Cortisol_A2
+:Test_Cortisol_A2 rdf:type owl:NamedIndividual ,
+                           :HormoneTest ;
+                  :measuresHormone :Cortisol ;
+                  <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> "165.0"^^xsd:double ;
+                  <http://niche.cs.dal.ca/reflex-ontology.owl#stage> "2"^^xsd:int .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Test_E2_A1
+:Test_E2_A1 rdf:type owl:NamedIndividual ,
+                     :HormoneTest ;
+            :measuresHormone :E2 ;
+            <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> "90.4"^^xsd:double ;
+            <http://niche.cs.dal.ca/reflex-ontology.owl#stage> "1"^^xsd:int .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Test_FSH_A1
+:Test_FSH_A1 rdf:type owl:NamedIndividual ,
+                      :HormoneTest ;
+             :measuresHormone :FSH ;
+             <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> "0.3"^^xsd:double ;
+             <http://niche.cs.dal.ca/reflex-ontology.owl#stage> "1"^^xsd:int .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Test_FT4_A0
+:Test_FT4_A0 rdf:type owl:NamedIndividual ,
+                      :HormoneTest ;
+             :measuresHormone :FT4 ;
+             <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> "8.0"^^xsd:double ;
+             <http://niche.cs.dal.ca/reflex-ontology.owl#stage> 0 .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Test_LH_A1
+:Test_LH_A1 rdf:type owl:NamedIndividual ,
+                     :HormoneTest ;
+            :measuresHormone :LH ;
+            <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> "3.4"^^xsd:double ;
+            <http://niche.cs.dal.ca/reflex-ontology.owl#stage> "1"^^xsd:int .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Test_Prolactin_A2
+:Test_Prolactin_A2 rdf:type owl:NamedIndividual ,
+                            :HormoneTest ;
+                   :measuresHormone :Prolactin ;
+                   <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> "37.4"^^xsd:double ;
+                   <http://niche.cs.dal.ca/reflex-ontology.owl#stage> "2"^^xsd:int .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Test_TSH_A0
+:Test_TSH_A0 rdf:type owl:NamedIndividual ,
+                      :HormoneTest ;
+             :measuresHormone :TSH ;
+             <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> "3.2"^^xsd:double ;
+             <http://niche.cs.dal.ca/reflex-ontology.owl#stage> 0 .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#Test_TST_A1
+:Test_TST_A1 rdf:type owl:NamedIndividual ,
+                      :HormoneTest ;
+             :measuresHormone :TST ;
+             <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> "3.2"^^xsd:double ;
+             <http://niche.cs.dal.ca/reflex-ontology.owl#stage> "1"^^xsd:int .
+
+
+###  http://niche.cs.dal.ca/pituitary-reflex-ontology.owl#ThyroidMedication_A
+:ThyroidMedication_A rdf:type owl:NamedIndividual ,
+                              :ThyroidMedication ,
+                              <http://niche.cs.dal.ca/reflex-ontology.owl#Medication> .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#t> rdf:type swrl:Variable .
+
+<urn:swrl:var#o> rdf:type swrl:Variable .
+
+<urn:swrl:var#p> rdf:type swrl:Variable .
+
+<urn:swrl:var#i> rdf:type swrl:Variable .
+
+<urn:swrl:var#m> rdf:type swrl:Variable .
+
+<urn:swrl:var#a> rdf:type swrl:Variable .
+
+[ rdfs:comment "ReflexRule1.1" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :HormoneTest ;
+                           swrl:argument1 <urn:swrl:var#t>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate :measuresHormone ;
+                                      swrl:argument1 <urn:swrl:var#t> ;
+                                      swrl:argument2 :FT4
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                 swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> ;
+                                                 swrl:argument1 <urn:swrl:var#t> ;
+                                                 swrl:argument2 <urn:swrl:var#o>
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                            swrl:builtin swrlb:lessThan ;
+                                                            swrl:arguments [ rdf:type rdf:List ;
+                                                                             rdf:first <urn:swrl:var#o> ;
+                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                        rdf:first 9.5 ;
+                                                                                        rdf:rest rdf:nil
+                                                                                      ]
+                                                                           ]
+                                                          ] ;
+                                                rdf:rest rdf:nil
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsTest1> ;
+                           swrl:argument1 :ReflexRule1 ;
+                           swrl:argument2 <urn:swrl:var#t>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "FollowupRule113.2" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :measuresHormone ;
+                           swrl:argument1 <urn:swrl:var#t> ;
+                           swrl:argument2 :FSH
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate :range ;
+                                      swrl:argument1 <urn:swrl:var#t> ;
+                                      swrl:argument2 :NonRaised
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsTest2> ;
+                           swrl:argument1 :FollowupRule113 ;
+                           swrl:argument2 <urn:swrl:var#t>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "Outcome_FSH" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#gender> ;
+                           swrl:argument1 <urn:swrl:var#p> ;
+                           swrl:argument2 <http://niche.cs.dal.ca/reflex-ontology.owl#Male>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#hasTest> ;
+                                      swrl:argument1 <urn:swrl:var#p> ;
+                                      swrl:argument2 <urn:swrl:var#t>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate :measuresHormone ;
+                                                 swrl:argument1 <urn:swrl:var#t> ;
+                                                 swrl:argument2 :FSH
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                            swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> ;
+                                                            swrl:argument1 <urn:swrl:var#t> ;
+                                                            swrl:argument2 <urn:swrl:var#o>
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                       swrl:builtin swrlb:lessThan ;
+                                                                       swrl:arguments [ rdf:type rdf:List ;
+                                                                                        rdf:first <urn:swrl:var#o> ;
+                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                   rdf:first 10 ;
+                                                                                                   rdf:rest rdf:nil
+                                                                                                 ]
+                                                                                      ]
+                                                                     ] ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :range ;
+                           swrl:argument1 <urn:swrl:var#t> ;
+                           swrl:argument2 :NonRaised
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "FollowupRule112.2" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :measuresHormone ;
+                           swrl:argument1 <urn:swrl:var#t> ;
+                           swrl:argument2 :FSH
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                      swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> ;
+                                      swrl:argument1 <urn:swrl:var#t> ;
+                                      swrl:argument2 <urn:swrl:var#o>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                 swrl:builtin swrlb:lessThan ;
+                                                 swrl:arguments [ rdf:type rdf:List ;
+                                                                  rdf:first <urn:swrl:var#o> ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first 0.5 ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                                ]
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsTest2> ;
+                           swrl:argument1 :FollowupRule112 ;
+                           swrl:argument2 <urn:swrl:var#t>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "FollowupRule111.2" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :measuresHormone ;
+                           swrl:argument1 <urn:swrl:var#t> ;
+                           swrl:argument2 :FSH
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                      swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> ;
+                                      swrl:argument1 <urn:swrl:var#t> ;
+                                      swrl:argument2 <urn:swrl:var#o>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                 swrl:builtin swrlb:lessThan ;
+                                                 swrl:arguments [ rdf:type rdf:List ;
+                                                                  rdf:first <urn:swrl:var#o> ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first 15 ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                                ]
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsTest2> ;
+                           swrl:argument1 :FollowupRule111 ;
+                           swrl:argument2 <urn:swrl:var#t>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "ReflexRule1.2" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :HormoneTest ;
+                           swrl:argument1 <urn:swrl:var#t>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate :measuresHormone ;
+                                      swrl:argument1 <urn:swrl:var#t> ;
+                                      swrl:argument2 :TSH
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                 swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> ;
+                                                 swrl:argument1 <urn:swrl:var#t> ;
+                                                 swrl:argument2 <urn:swrl:var#o>
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                            swrl:builtin swrlb:lessThan ;
+                                                            swrl:arguments [ rdf:type rdf:List ;
+                                                                             rdf:first <urn:swrl:var#o> ;
+                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                        rdf:first 4.3 ;
+                                                                                        rdf:rest rdf:nil
+                                                                                      ]
+                                                                           ]
+                                                          ] ;
+                                                rdf:rest rdf:nil
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsTest2> ;
+                           swrl:argument1 :ReflexRule1 ;
+                           swrl:argument2 <urn:swrl:var#t>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "FollowupRule113.3" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :measuresHormone ;
+                           swrl:argument1 <urn:swrl:var#t> ;
+                           swrl:argument2 :LH
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate :range ;
+                                      swrl:argument1 <urn:swrl:var#t> ;
+                                      swrl:argument2 :NonRaised
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsTest3> ;
+                           swrl:argument1 :FollowupRule113 ;
+                           swrl:argument2 <urn:swrl:var#t>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "Outcome_LH" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#gender> ;
+                           swrl:argument1 <urn:swrl:var#p> ;
+                           swrl:argument2 <http://niche.cs.dal.ca/reflex-ontology.owl#Male>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#hasTest> ;
+                                      swrl:argument1 <urn:swrl:var#p> ;
+                                      swrl:argument2 <urn:swrl:var#t>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate :measuresHormone ;
+                                                 swrl:argument1 <urn:swrl:var#t> ;
+                                                 swrl:argument2 :LH
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                            swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> ;
+                                                            swrl:argument1 <urn:swrl:var#t> ;
+                                                            swrl:argument2 <urn:swrl:var#o>
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                       swrl:builtin swrlb:lessThan ;
+                                                                       swrl:arguments [ rdf:type rdf:List ;
+                                                                                        rdf:first <urn:swrl:var#o> ;
+                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                   rdf:first 10 ;
+                                                                                                   rdf:rest rdf:nil
+                                                                                                 ]
+                                                                                      ]
+                                                                     ] ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :range ;
+                           swrl:argument1 <urn:swrl:var#t> ;
+                           swrl:argument2 :NonRaised
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "FollowupRule122.1" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :measuresHormone ;
+                           swrl:argument1 <urn:swrl:var#t> ;
+                           swrl:argument2 :Prolactin
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate :range ;
+                                      swrl:argument1 <urn:swrl:var#t> ;
+                                      swrl:argument2 :Raised
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsTest1> ;
+                           swrl:argument1 :FollowupRule122 ;
+                           swrl:argument2 <urn:swrl:var#t>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "Outcome_Prolactin_Female" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#gender> ;
+                           swrl:argument1 <urn:swrl:var#p> ;
+                           swrl:argument2 <http://niche.cs.dal.ca/reflex-ontology.owl#Female>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#hasTest> ;
+                                      swrl:argument1 <urn:swrl:var#p> ;
+                                      swrl:argument2 <urn:swrl:var#t>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate :measuresHormone ;
+                                                 swrl:argument1 <urn:swrl:var#t> ;
+                                                 swrl:argument2 :Prolactin
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                            swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> ;
+                                                            swrl:argument1 <urn:swrl:var#t> ;
+                                                            swrl:argument2 <urn:swrl:var#o>
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                       swrl:builtin swrlb:greaterThan ;
+                                                                       swrl:arguments [ rdf:type rdf:List ;
+                                                                                        rdf:first <urn:swrl:var#o> ;
+                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                   rdf:first 30 ;
+                                                                                                   rdf:rest rdf:nil
+                                                                                                 ]
+                                                                                      ]
+                                                                     ] ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :range ;
+                           swrl:argument1 <urn:swrl:var#t> ;
+                           swrl:argument2 :Raised
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "Outcome_Prolactin_Male" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#gender> ;
+                           swrl:argument1 <urn:swrl:var#p> ;
+                           swrl:argument2 <http://niche.cs.dal.ca/reflex-ontology.owl#Male>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#hasTest> ;
+                                      swrl:argument1 <urn:swrl:var#p> ;
+                                      swrl:argument2 <urn:swrl:var#t>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate :measuresHormone ;
+                                                 swrl:argument1 <urn:swrl:var#t> ;
+                                                 swrl:argument2 :Prolactin
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                            swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> ;
+                                                            swrl:argument1 <urn:swrl:var#t> ;
+                                                            swrl:argument2 <urn:swrl:var#o>
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                       swrl:builtin swrlb:greaterThan ;
+                                                                       swrl:arguments [ rdf:type rdf:List ;
+                                                                                        rdf:first <urn:swrl:var#o> ;
+                                                                                        rdf:rest [ rdf:type rdf:List ;
+                                                                                                   rdf:first 20 ;
+                                                                                                   rdf:rest rdf:nil
+                                                                                                 ]
+                                                                                      ]
+                                                                     ] ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :range ;
+                           swrl:argument1 <urn:swrl:var#t> ;
+                           swrl:argument2 :Raised
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "FollowupRule113.1" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :measuresHormone ;
+                           swrl:argument1 <urn:swrl:var#t> ;
+                           swrl:argument2 :TST
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate :range ;
+                                      swrl:argument1 <urn:swrl:var#t> ;
+                                      swrl:argument2 :Low
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsTest1> ;
+                           swrl:argument1 :FollowupRule113 ;
+                           swrl:argument2 <urn:swrl:var#t>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "Outcome_TST" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :measuresHormone ;
+                           swrl:argument1 <urn:swrl:var#t> ;
+                           swrl:argument2 :TST
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                      swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> ;
+                                      swrl:argument1 <urn:swrl:var#t> ;
+                                      swrl:argument2 <urn:swrl:var#o>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                 swrl:builtin swrlb:lessThan ;
+                                                 swrl:arguments [ rdf:type rdf:List ;
+                                                                  rdf:first <urn:swrl:var#o> ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first 8 ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                                ]
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :range ;
+                           swrl:argument1 <urn:swrl:var#t> ;
+                           swrl:argument2 :Low
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "TestPatternRule111" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#gender> ;
+                           swrl:argument1 <urn:swrl:var#p> ;
+                           swrl:argument2 <http://niche.cs.dal.ca/reflex-ontology.owl#Female>
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsCriteria> ;
+                           swrl:argument1 :TestPatternRule111 ;
+                           swrl:argument2 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "FollowupRule111.3" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:BuiltinAtom ;
+                           swrl:builtin swrlb:greaterThan ;
+                           swrl:arguments [ rdf:type rdf:List ;
+                                            rdf:first <urn:swrl:var#a> ;
+                                            rdf:rest [ rdf:type rdf:List ;
+                                                       rdf:first 55 ;
+                                                       rdf:rest rdf:nil
+                                                     ]
+                                          ]
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#gender> ;
+                                      swrl:argument1 <urn:swrl:var#p> ;
+                                      swrl:argument2 <http://niche.cs.dal.ca/reflex-ontology.owl#Female>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                 swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#age> ;
+                                                 swrl:argument1 <urn:swrl:var#p> ;
+                                                 swrl:argument2 <urn:swrl:var#a>
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsProfile> ;
+                           swrl:argument1 :FollowupRule111 ;
+                           swrl:argument2 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "FollowupRule112.3" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:BuiltinAtom ;
+                           swrl:builtin swrlb:lessThanOrEqual ;
+                           swrl:arguments [ rdf:type rdf:List ;
+                                            rdf:first <urn:swrl:var#a> ;
+                                            rdf:rest [ rdf:type rdf:List ;
+                                                       rdf:first 55 ;
+                                                       rdf:rest rdf:nil
+                                                     ]
+                                          ]
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#gender> ;
+                                      swrl:argument1 <urn:swrl:var#p> ;
+                                      swrl:argument2 <http://niche.cs.dal.ca/reflex-ontology.owl#Female>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                 swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#age> ;
+                                                 swrl:argument1 <urn:swrl:var#p> ;
+                                                 swrl:argument2 <urn:swrl:var#a>
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsProfile> ;
+                           swrl:argument1 :FollowupRule112 ;
+                           swrl:argument2 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "TestPatternRule112" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#gender> ;
+                           swrl:argument1 <urn:swrl:var#p> ;
+                           swrl:argument2 <http://niche.cs.dal.ca/reflex-ontology.owl#Male>
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsCriteria> ;
+                           swrl:argument1 :TestPatternRule112 ;
+                           swrl:argument2 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "FollowupRule113.4" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#gender> ;
+                           swrl:argument1 <urn:swrl:var#p> ;
+                           swrl:argument2 <http://niche.cs.dal.ca/reflex-ontology.owl#Male>
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsProfile> ;
+                           swrl:argument1 :FollowupRule113 ;
+                           swrl:argument2 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "ExclusionRule12" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#hasIllness> ;
+                           swrl:argument1 <urn:swrl:var#p> ;
+                           swrl:argument2 <urn:swrl:var#i>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate :NonThyroidalIllness ;
+                                      swrl:argument1 <urn:swrl:var#i>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsCriteria> ;
+                           swrl:argument1 :ExclusionRule12 ;
+                           swrl:argument2 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "ExclusionRule11" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#hasMedication> ;
+                           swrl:argument1 <urn:swrl:var#p> ;
+                           swrl:argument2 <urn:swrl:var#m>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate :ThyroidMedication ;
+                                      swrl:argument1 <urn:swrl:var#m>
+                                    ] ;
+                          rdf:rest rdf:nil
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsCriteria> ;
+                           swrl:argument1 :ExclusionRule11 ;
+                           swrl:argument2 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "TestPatternRule113" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#Patient> ;
+                           swrl:argument1 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsCriteria> ;
+                           swrl:argument1 :TestPatternRule113 ;
+                           swrl:argument2 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "TestPatternRule114" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#Patient> ;
+                           swrl:argument1 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsCriteria> ;
+                           swrl:argument1 :TestPatternRule114 ;
+                           swrl:argument2 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "TestPatternRule121" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#Patient> ;
+                           swrl:argument1 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsCriteria> ;
+                           swrl:argument1 :TestPatternRule121 ;
+                           swrl:argument2 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "FollowupRule121.2" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#Patient> ;
+                           swrl:argument1 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsProfile> ;
+                           swrl:argument1 :FollowupRule121 ;
+                           swrl:argument2 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "FollowupRule122.2" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#Patient> ;
+                           swrl:argument1 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsProfile> ;
+                           swrl:argument1 :FollowupRule122 ;
+                           swrl:argument2 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "ReflexRule1.3" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#Patient> ;
+                           swrl:argument1 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsProfile> ;
+                           swrl:argument1 :ReflexRule1 ;
+                           swrl:argument2 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "FollowupRule121.1" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate :measuresHormone ;
+                           swrl:argument1 <urn:swrl:var#t> ;
+                           swrl:argument2 :Cortisol
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                      swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> ;
+                                      swrl:argument1 <urn:swrl:var#t> ;
+                                      swrl:argument2 <urn:swrl:var#o>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                 swrl:builtin swrlb:lessThan ;
+                                                 swrl:arguments [ rdf:type rdf:List ;
+                                                                  rdf:first <urn:swrl:var#o> ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first 180 ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                                ]
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsTest1> ;
+                           swrl:argument1 :FollowupRule121 ;
+                           swrl:argument2 <urn:swrl:var#t>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "FollowupRule111.1" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:BuiltinAtom ;
+                           swrl:builtin swrlb:lessThan ;
+                           swrl:arguments [ rdf:type rdf:List ;
+                                            rdf:first <urn:swrl:var#o> ;
+                                            rdf:rest [ rdf:type rdf:List ;
+                                                       rdf:first 100 ;
+                                                       rdf:rest rdf:nil
+                                                     ]
+                                          ]
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate :measuresHormone ;
+                                      swrl:argument1 <urn:swrl:var#t> ;
+                                      swrl:argument2 :E2
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                 swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> ;
+                                                 swrl:argument1 <urn:swrl:var#t> ;
+                                                 swrl:argument2 <urn:swrl:var#o>
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsTest1> ;
+                           swrl:argument1 :FollowupRule111 ;
+                           swrl:argument2 <urn:swrl:var#t>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdfs:comment "FollowupRule112.1" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:BuiltinAtom ;
+                           swrl:builtin swrlb:lessThan ;
+                           swrl:arguments [ rdf:type rdf:List ;
+                                            rdf:first <urn:swrl:var#o> ;
+                                            rdf:rest [ rdf:type rdf:List ;
+                                                       rdf:first 100 ;
+                                                       rdf:rest rdf:nil
+                                                     ]
+                                          ]
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate :measuresHormone ;
+                                      swrl:argument1 <urn:swrl:var#t> ;
+                                      swrl:argument2 :E2
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                 swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#outcome> ;
+                                                 swrl:argument1 <urn:swrl:var#t> ;
+                                                 swrl:argument2 <urn:swrl:var#o>
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                           swrl:propertyPredicate <http://niche.cs.dal.ca/reflex-ontology.owl#meetsTest1> ;
+                           swrl:argument1 :FollowupRule112 ;
+                           swrl:argument2 <urn:swrl:var#t>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi
