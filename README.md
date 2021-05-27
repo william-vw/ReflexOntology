@@ -1,6 +1,6 @@
 # ReflexOntology
 
-The ReflexOntology and its Pituitary Dysfunction extension as presented in the AIME 2021 submission.
+The ReflexOntology and its Pituitary Dysfunction extension.
 
 Some notes:
 - Due to limitations of SWRL (and OWL), some expressions are not as elegant as they could be; i.e., where we had to resort to explicly enumerating the tests associated with a reflex rule or follow-up rule.
