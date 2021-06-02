@@ -1,6 +1,8 @@
 # ReflexOntology
 
-The ReflexOntology and its Pituitary Dysfunction extension.
+The core [ReflexOntology](https://github.com/william-vw/ReflexOntology/blob/main/reflex-ontology.owl) is implemented by a set of domain-agnostic classes and SWRL rules that implement reflex protocols. It is illustrated here.
+
+One can implement domain-specific clinical criteria (e.g., endocrinology) by extending the ReflexOntology with domain-specific SWRL rules, as illustrated by the [Pituitary Dysfunction reflex ontology](https://github.com/william-vw/ReflexOntology/blob/main/pituitary-reflex-ontology.owl).
 
 Some notes:
 - Due to limitations of SWRL (and OWL), some expressions are not as elegant as they could be; i.e., where we had to resort to explicly enumerating the tests associated with a reflex rule or follow-up rule.
