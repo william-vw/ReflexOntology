@@ -1,6 +1,6 @@
 # ReflexOntology
 
-The core [ReflexOntology](https://github.com/william-vw/ReflexOntology/blob/main/reflex-ontology.owl) is implemented by a set of domain-agnostic classes and SWRL rules that implement reflex protocols. 
+The core [ReflexOntology](https://github.com/william-vw/ReflexOntology/blob/main/reflex-ontology.owl) is implemented by a set of domain-agnostic classes and SWRL rules for implementing reflex protocols. 
 
 It is illustrated here: ![Reflex ontology (Protege)](reflex-ontology.png "Reflex Ontology")
 
